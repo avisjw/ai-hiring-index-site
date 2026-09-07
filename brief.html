@@ -1,0 +1,198 @@
+<title>AI Hiring Index — 07 Sep 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,300..600&display=swap">
+<style>
+    :root{--paper:#EDEFF2;--surface:#F8F9FB;--sunk:#E4E7EC;--ink:#151A21;
+      --soft:#414B58;--muted:#6B7684;--rule:#D2D8E0;--strong:#A9B4C1;
+      --accent:#8E2A2A;--good:#1F6156;
+      --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+      --body:"Newsreader",Georgia,serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;}
+    @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+      --paper:#12161C;--surface:#1A2028;--sunk:#0C1015;--ink:#E9EDF2;
+      --soft:#B4BDC9;--muted:#8492A1;--rule:#2A323C;--strong:#43505E;
+      --accent:#E37B69;--good:#63B7A4;}}
+    :root[data-theme="dark"]{--paper:#12161C;--surface:#1A2028;--sunk:#0C1015;
+      --ink:#E9EDF2;--soft:#B4BDC9;--muted:#8492A1;--rule:#2A323C;--strong:#43505E;
+      --accent:#E37B69;--good:#63B7A4;}
+    *{box-sizing:border-box}
+    body{background:var(--paper);color:var(--ink);font-family:var(--body);
+      font-size:1rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+    .sheet{max-width:50rem;margin:0 auto;padding:clamp(1.75rem,4vw,3.25rem) clamp(1.1rem,3.5vw,1.75rem) 4rem}
+    h1,h2{font-family:var(--display);margin:0;text-wrap:balance}
+    h1{font-size:clamp(1.75rem,5vw,2.5rem);font-variation-settings:"wdth" 108,"wght" 780;
+      line-height:1.03;letter-spacing:-.022em}
+    h2{font-size:.938rem;font-variation-settings:"wdth" 100,"wght" 700;letter-spacing:.01em}
+    p{margin:0}
+    .eyebrow{font-family:var(--mono);font-size:.688rem;font-weight:500;letter-spacing:.16em;
+      text-transform:uppercase;color:var(--muted)}
+    header{display:flex;flex-direction:column;gap:.9rem;padding-bottom:1.5rem;
+      border-bottom:1px solid var(--rule)}
+    .filing{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between;align-items:baseline}
+    .lede{font-size:1.0625rem;color:var(--soft);max-width:38rem}
+    .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));
+      gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:1.75rem}
+    .kpi{background:var(--paper);padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.3rem}
+    .kpi .n{font-family:var(--display);font-variation-settings:"wdth" 105,"wght" 720;
+      font-size:1.65rem;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+    .kpi .l{font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;
+      text-transform:uppercase;color:var(--muted);line-height:1.35}
+    section{margin-top:2.5rem}
+    .sec-head{display:flex;align-items:baseline;gap:.875rem;margin-bottom:.45rem}
+    .sec-head::after{content:"";flex:1;height:1px;background:var(--rule)}
+    .why{font-size:.938rem;color:var(--muted);margin-bottom:.9rem;max-width:38rem;font-style:italic}
+    .scroll{overflow-x:auto}
+    table{width:100%;border-collapse:collapse;font-size:.875rem}
+    th{font-family:var(--mono);font-size:.65rem;font-weight:600;letter-spacing:.1em;
+      text-transform:uppercase;color:var(--muted);text-align:left;
+      padding:.5rem .7rem;border-bottom:1px solid var(--strong);white-space:nowrap}
+    td{padding:.55rem .7rem;border-bottom:1px solid var(--rule);vertical-align:top}
+    td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;
+      font-size:.813rem;white-space:nowrap}
+    tr:hover td{background:var(--surface)}
+    .co{font-family:var(--display);font-variation-settings:"wdth" 100,"wght" 600;font-size:.875rem}
+    .seg{font-family:var(--mono);font-size:.625rem;letter-spacing:.06em;text-transform:uppercase;
+      color:var(--muted);display:block;margin-top:.15rem}
+    .bar{display:block;height:5px;background:var(--sunk);margin-top:.35rem;min-width:60px}
+    .bar i{display:block;height:100%;background:var(--accent)}
+    .up{color:var(--good);font-weight:600}.down{color:var(--accent);font-weight:600}
+    .pill{font-family:var(--mono);font-size:.625rem;letter-spacing:.05em;padding:.12em .45em;
+      border:1px solid var(--strong);color:var(--soft);white-space:nowrap}
+    .pill.hot{border-color:var(--accent);color:var(--accent)}
+    a{color:inherit;text-decoration-color:var(--strong);text-underline-offset:2px}
+    a:hover{color:var(--accent);text-decoration-color:var(--accent)}
+    a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+    .note{margin-top:2.5rem;padding:1.15rem 1.3rem;background:var(--surface);
+      border:1px solid var(--rule);border-left:3px solid var(--accent);
+      display:flex;flex-direction:column;gap:.55rem}
+    .note p{font-size:.938rem;color:var(--soft)}
+    footer{margin-top:2.5rem;padding-top:1.1rem;border-top:1px solid var(--rule);
+      font-family:var(--mono);font-size:.75rem;color:var(--muted);line-height:1.6}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+    </style>
+<div class="sheet">
+<header>
+<div class="filing"><span class="eyebrow">AI Hiring Index &middot; Weekly</span><span class="eyebrow">07 September 2026</span></div>
+<h1>Who is hiring for AI, and what they're building with</h1>
+<p class="lede">Pulled directly from 82 company ATS boards &mdash; not job-board listings. Every req below links to the company's own posting. This is the baseline run; next week's edition carries week-over-week deltas.</p>
+</header>
+<div class="kpis">
+<div class="kpi"><span class="n">3,276</span><span class="l">Open AI reqs</span></div>
+<div class="kpi"><span class="n">74</span><span class="l">Companies hiring</span></div>
+<div class="kpi"><span class="n">1,285</span><span class="l">Stale (45–180 days)</span></div>
+<div class="kpi"><span class="n">721</span><span class="l">Evergreen (180+ days)</span></div>
+<div class="kpi"><span class="n">311</span><span class="l">AI-titled, no ML content</span></div>
+<div class="kpi"><span class="n">18%</span><span class="l">Remote-eligible</span></div>
+</div>
+<section>
+<div class="sec-head"><h2>Stack demand</h2></div>
+<p class="why">Every row is a company that has committed budget to that tool. A req naming vLLM is an inference-serving team that exists and is scaling.</p>
+<div class="scroll"><table><thead><tr><th>Tool named in JD</th><th class="num">Companies</th><th class="num">Reqs</th><th class="num">Wk</th><th>Who</th></tr></thead><tbody>
+<tr><td><strong>Kubernetes</strong><span class="bar"><i style="width:100%"></i></span></td><td class="num">56</td><td class="num">514</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Abridge, Alan Turing Institute, Anduril +53</td></tr>
+<tr><td><strong>CUDA</strong><span class="bar"><i style="width:60%"></i></span></td><td class="num">34</td><td class="num">156</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Abridge, Anduril, Anthropic +31</td></tr>
+<tr><td><strong>JAX</strong><span class="bar"><i style="width:53%"></i></span></td><td class="num">30</td><td class="num">145</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Abridge, Anduril, Anthropic +27</td></tr>
+<tr><td><strong>Triton</strong><span class="bar"><i style="width:51%"></i></span></td><td class="num">29</td><td class="num">78</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Abridge, Anduril, Anthropic +26</td></tr>
+<tr><td><strong>vLLM</strong><span class="bar"><i style="width:46%"></i></span></td><td class="num">26</td><td class="num">116</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Abridge, Anyscale, Baseten +23</td></tr>
+<tr><td><strong>Ray</strong><span class="bar"><i style="width:42%"></i></span></td><td class="num">24</td><td class="num">76</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Anduril, Anyscale, Baseten +21</td></tr>
+<tr><td><strong>TensorRT</strong><span class="bar"><i style="width:39%"></i></span></td><td class="num">22</td><td class="num">84</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Anduril, Anyscale, Baseten +19</td></tr>
+<tr><td><strong>LangChain</strong><span class="bar"><i style="width:37%"></i></span></td><td class="num">21</td><td class="num">95</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Abridge, Alan Turing Institute, Anduril +18</td></tr>
+<tr><td><strong>Slurm</strong><span class="bar"><i style="width:35%"></i></span></td><td class="num">20</td><td class="num">82</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Anduril, Anthropic, Baseten +17</td></tr>
+<tr><td><strong>NCCL</strong><span class="bar"><i style="width:35%"></i></span></td><td class="num">20</td><td class="num">66</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Anduril, Anthropic, Baseten +17</td></tr>
+<tr><td><strong>Hugging Face</strong><span class="bar"><i style="width:35%"></i></span></td><td class="num">20</td><td class="num">44</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Alan Turing Institute, Anduril, Baseten +17</td></tr>
+<tr><td><strong>Snowflake</strong><span class="bar"><i style="width:33%"></i></span></td><td class="num">19</td><td class="num">67</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Anduril, Baseten, CoreWeave +16</td></tr>
+<tr><td><strong>Airflow</strong><span class="bar"><i style="width:33%"></i></span></td><td class="num">19</td><td class="num">50</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Anduril, Anthropic, Baseten +16</td></tr>
+<tr><td><strong>InfiniBand</strong><span class="bar"><i style="width:32%"></i></span></td><td class="num">18</td><td class="num">91</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Anduril, Anthropic, Baseten +15</td></tr>
+<tr><td><strong>Modal</strong><span class="bar"><i style="width:32%"></i></span></td><td class="num">18</td><td class="num">77</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Anduril, Anyscale, Baseten +15</td></tr>
+<tr><td><strong>SGLang</strong><span class="bar"><i style="width:30%"></i></span></td><td class="num">17</td><td class="num">70</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Baseten, Cerebras, Cohere +14</td></tr>
+<tr><td><strong>DeepSpeed</strong><span class="bar"><i style="width:30%"></i></span></td><td class="num">17</td><td class="num">28</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Anduril, Baseten, Cohere +14</td></tr>
+<tr><td><strong>Databricks</strong><span class="bar"><i style="width:25%"></i></span></td><td class="num">14</td><td class="num">310</td><td class="num"></td><td style="font-size:.813rem;color:var(--soft)">Alan Turing Institute, Anduril, Baseten +11</td></tr>
+</tbody></table></div>
+</section>
+<section>
+<div class="sec-head"><h2>Who is scaling</h2></div>
+<p class="why">AI reqs open now, by company. Movement here is the headcount signal that shows up in a funding announcement three months later.</p>
+<div class="scroll"><table><thead><tr><th>Company</th><th class="num">AI reqs</th><th class="num">Wk</th><th class="num">All open</th><th class="num">AI share</th></tr></thead><tbody>
+<tr><td><span class="co">Nebius</span><span class="seg">infra</span><span class="bar"><i style="width:100%"></i></span></td><td class="num">374</td><td class="num"></td><td class="num">374</td><td class="num">100%</td></tr>
+<tr><td><span class="co">Databricks</span><span class="seg">infra</span><span class="bar"><i style="width:74%"></i></span></td><td class="num">280</td><td class="num"></td><td class="num">870</td><td class="num">32%</td></tr>
+<tr><td><span class="co">Anthropic</span><span class="seg">foundation-model</span><span class="bar"><i style="width:62%"></i></span></td><td class="num">233</td><td class="num"></td><td class="num">589</td><td class="num">39%</td></tr>
+<tr><td><span class="co">Anduril</span><span class="seg">defense</span><span class="bar"><i style="width:60%"></i></span></td><td class="num">226</td><td class="num"></td><td class="num">2212</td><td class="num">10%</td></tr>
+<tr><td><span class="co">OpenAI</span><span class="seg">foundation-model</span><span class="bar"><i style="width:51%"></i></span></td><td class="num">194</td><td class="num"></td><td class="num">780</td><td class="num">24%</td></tr>
+<tr><td><span class="co">Scale AI</span><span class="seg">data</span><span class="bar"><i style="width:33%"></i></span></td><td class="num">126</td><td class="num"></td><td class="num">215</td><td class="num">58%</td></tr>
+<tr><td><span class="co">Waymo</span><span class="seg">robotics</span><span class="bar"><i style="width:28%"></i></span></td><td class="num">106</td><td class="num"></td><td class="num">344</td><td class="num">30%</td></tr>
+<tr><td><span class="co">Cohere</span><span class="seg">foundation-model</span><span class="bar"><i style="width:23%"></i></span></td><td class="num">88</td><td class="num"></td><td class="num">143</td><td class="num">61%</td></tr>
+<tr><td><span class="co">Baseten</span><span class="seg">infra</span><span class="bar"><i style="width:23%"></i></span></td><td class="num">88</td><td class="num"></td><td class="num">88</td><td class="num">100%</td></tr>
+<tr><td><span class="co">Wayve</span><span class="seg">uk-eu</span><span class="bar"><i style="width:23%"></i></span></td><td class="num">88</td><td class="num"></td><td class="num">166</td><td class="num">53%</td></tr>
+<tr><td><span class="co">Sierra</span><span class="seg">apps</span><span class="bar"><i style="width:22%"></i></span></td><td class="num">86</td><td class="num"></td><td class="num">212</td><td class="num">40%</td></tr>
+<tr><td><span class="co">ElevenLabs</span><span class="seg">foundation-model</span><span class="bar"><i style="width:21%"></i></span></td><td class="num">82</td><td class="num"></td><td class="num">252</td><td class="num">32%</td></tr>
+<tr><td><span class="co">Fireworks AI</span><span class="seg">infra</span><span class="bar"><i style="width:18%"></i></span></td><td class="num">69</td><td class="num"></td><td class="num">69</td><td class="num">100%</td></tr>
+<tr><td><span class="co">CoreWeave</span><span class="seg">infra</span><span class="bar"><i style="width:17%"></i></span></td><td class="num">67</td><td class="num"></td><td class="num">287</td><td class="num">23%</td></tr>
+</tbody></table></div>
+</section>
+<section>
+<div class="sec-head"><h2>Reqs that won&rsquo;t close</h2></div>
+<p class="why">Open 45+ days. Every one of these is a hiring manager who has missed a deadline &mdash; the warmest inbound a recruiter or candidate will find this week.</p>
+<div class="scroll"><table><thead><tr><th>Role</th><th>Company</th><th class="num">Days open</th><th class="num">Comp</th></tr></thead><tbody>
+<tr><td><a href="https://jobs.ashbyhq.com/elevenlabs/b081fafb-3659-4bf6-8e87-eb5ccc3ff234">Enterprise Solutions Engineer - Spain</a><span class="seg">AI Implementation &middot; Spain</span></td><td><span class="co">ElevenLabs</span></td><td class="num"><span class="pill hot">180d</span></td><td class="num">&mdash;</td></tr>
+<tr><td><a href="https://jobs.ashbyhq.com/elevenlabs/ce00fe7b-a93a-436b-bd5e-2eff87c48f23">Enterprise Solutions Engineer - France</a><span class="seg">AI Implementation &middot; France</span></td><td><span class="co">ElevenLabs</span></td><td class="num"><span class="pill hot">180d</span></td><td class="num">&mdash;</td></tr>
+<tr><td><a href="https://job-boards.greenhouse.io/anthropic/jobs/5150472008">Staff Software Engineer, Inference</a><span class="seg">AI Infrastructure &middot; Dublin, IE</span></td><td><span class="co">Anthropic</span></td><td class="num"><span class="pill hot">180d</span></td><td class="num">&mdash;</td></tr>
+<tr><td><a href="https://careers.nebius.com/?gh_jid=4763156101">Technical Project Manager - IAAS</a><span class="seg">AI Operations &middot; Amsterdam, Netherlands</span></td><td><span class="co">Nebius</span></td><td class="num"><span class="pill hot">180d</span></td><td class="num">&mdash;</td></tr>
+<tr><td><a href="https://careers.nebius.com/?gh_jid=4794078101">Warehouse Logistics Specialist</a><span class="seg">Other &middot; Bet Shemesh, Israel; Israel</span></td><td><span class="co">Nebius</span></td><td class="num"><span class="pill hot">180d</span></td><td class="num">&mdash;</td></tr>
+<tr><td><a href="https://wayve.firststage.co/jobs?gh_jid=8458272002">Senior SRE, AI Infrastructure </a><span class="seg">Other &middot; London</span></td><td><span class="co">Wayve</span></td><td class="num"><span class="pill hot">180d</span></td><td class="num">&mdash;</td></tr>
+<tr><td><a href="https://jobs.ashbyhq.com/reflectionai/bf075674-ad6c-4ab6-aa30-f7c37c59e759">Member of Technical Staff - Research Software Engineer</a><span class="seg">AI Research &middot; New York, NY</span></td><td><span class="co">Reflection AI</span></td><td class="num"><span class="pill hot">179d</span></td><td class="num">&mdash;</td></tr>
+<tr><td><a href="https://jobs.ashbyhq.com/mercor/dd4f59a1-d077-4c20-8333-9a7706210e99">Software Engineer, Automation</a><span class="seg">AI Engineering &middot; San Francisco</span></td><td><span class="co">Mercor</span></td><td class="num"><span class="pill hot">179d</span></td><td class="num">$130K&ndash;$500K</td></tr>
+<tr><td><a href="https://jobs.ashbyhq.com/openai/8fb1615c-34bf-47c4-a1d1-b7b2f836bbd3">Technical Program Manager, Compute Infrastructure</a><span class="seg">AI Operations &middot; San Francisco</span></td><td><span class="co">OpenAI</span></td><td class="num"><span class="pill hot">179d</span></td><td class="num">$257K&ndash;$335K</td></tr>
+<tr><td><a href="https://jobs.ashbyhq.com/sierra/effd7cd2-8a28-4bae-a3b8-40720ba09717">Product Manager, Agent Development</a><span class="seg">AI Product &middot; San Francisco, CA</span></td><td><span class="co">Sierra</span></td><td class="num"><span class="pill hot">179d</span></td><td class="num">$180K&ndash;$390K</td></tr>
+<tr><td><a href="https://jobs.ashbyhq.com/harvey/f47e1925-2a89-4264-8a1b-09cd9215f4dd">Senior Software Engineer, AI Platform</a><span class="seg">AI Infrastructure &middot; San Francisco</span></td><td><span class="co">Harvey</span></td><td class="num"><span class="pill hot">179d</span></td><td class="num">$220K&ndash;$300K</td></tr>
+<tr><td><a href="https://databricks.com/company/careers/open-positions/job?gh_jid=8461251002">Sr. Forward Deployed Engineer (FDE) - Communications, Media, Entertainment &amp; Games</a><span class="seg">AI Implementation &middot; Mountain View, California</span></td><td><span class="co">Databricks</span></td><td class="num"><span class="pill hot">179d</span></td><td class="num">$182K&ndash;$250K</td></tr>
+</tbody></table></div>
+</section>
+<section>
+<div class="sec-head"><h2>Stated comp, by role type</h2></div>
+<p class="why">Ranges parsed from the 1941 reqs that publish one (59% of the set). Median of posted midpoints.</p>
+<div class="scroll"><table><thead><tr><th>Role type</th><th class="num">Reqs</th><th class="num">Median low</th><th class="num">Median high</th><th class="num">Top posted</th></tr></thead><tbody>
+<tr><td><strong>AI Engineering</strong></td><td class="num">322</td><td class="num">$197K</td><td class="num">$292K</td><td class="num">$625K</td></tr>
+<tr><td><strong>Other</strong></td><td class="num">313</td><td class="num">$190K</td><td class="num">$253K</td><td class="num">$850K</td></tr>
+<tr><td><strong>AI Implementation</strong></td><td class="num">224</td><td class="num">$182K</td><td class="num">$250K</td><td class="num">$425K</td></tr>
+<tr><td><strong>AI Operations</strong></td><td class="num">184</td><td class="num">$191K</td><td class="num">$245K</td><td class="num">$445K</td></tr>
+<tr><td><strong>AI Product</strong></td><td class="num">177</td><td class="num">$191K</td><td class="num">$285K</td><td class="num">$490K</td></tr>
+<tr><td><strong>AI Research</strong></td><td class="num">154</td><td class="num">$220K</td><td class="num">$350K</td><td class="num">$850K</td></tr>
+<tr><td><strong>AI Infrastructure</strong></td><td class="num">111</td><td class="num">$210K</td><td class="num">$290K</td><td class="num">$850K</td></tr>
+<tr><td><strong>Go-to-market</strong></td><td class="num">102</td><td class="num">$180K</td><td class="num">$225K</td><td class="num">$550K</td></tr>
+<tr><td><strong>ML Engineering</strong></td><td class="num">76</td><td class="num">$220K</td><td class="num">$300K</td><td class="num">$555K</td></tr>
+<tr><td><strong>AI Customer Success</strong></td><td class="num">68</td><td class="num">$168K</td><td class="num">$215K</td><td class="num">$365K</td></tr>
+<tr><td><strong>AI Governance</strong></td><td class="num">41</td><td class="num">$285K</td><td class="num">$330K</td><td class="num">$490K</td></tr>
+<tr><td><strong>AI Adoption/Enablement</strong></td><td class="num">32</td><td class="num">$166K</td><td class="num">$205K</td><td class="num">$310K</td></tr>
+<tr><td><strong>Model Training</strong></td><td class="num">31</td><td class="num">$295K</td><td class="num">$431K</td><td class="num">$850K</td></tr>
+<tr><td><strong>AI Automation</strong></td><td class="num">30</td><td class="num">$166K</td><td class="num">$220K</td><td class="num">$390K</td></tr>
+<tr><td><strong>Data Engineering</strong></td><td class="num">28</td><td class="num">$210K</td><td class="num">$267K</td><td class="num">$850K</td></tr>
+<tr><td><strong>AI Business Analysis</strong></td><td class="num">23</td><td class="num">$165K</td><td class="num">$210K</td><td class="num">$425K</td></tr>
+<tr><td><strong>Security &amp; Safety</strong></td><td class="num">14</td><td class="num">$198K</td><td class="num">$285K</td><td class="num">$405K</td></tr>
+<tr><td><strong>AI Content/Creative</strong></td><td class="num">8</td><td class="num">$160K</td><td class="num">$234K</td><td class="num">$300K</td></tr>
+<tr><td><strong>AI Training/Annotation</strong></td><td class="num">3</td><td class="num">$152K</td><td class="num">$202K</td><td class="num">$206K</td></tr>
+</tbody></table></div>
+</section>
+<section>
+<div class="sec-head"><h2>Role mix &amp; sponsorship</h2></div>
+<p class="why">Sponsorship language is the single most-requested filter from international candidates and the least-published field on any job board.</p>
+<div class="scroll"><table><thead><tr><th>Role type</th><th class="num">Reqs</th><th class="num">Share</th><th class="num">Says will sponsor</th><th class="num">Says will not</th></tr></thead><tbody>
+<tr><td><strong>Other</strong></td><td class="num">634</td><td class="num">19%</td><td class="num">25</td><td class="num">8</td></tr>
+<tr><td><strong>AI Engineering</strong></td><td class="num">521</td><td class="num">15%</td><td class="num">29</td><td class="num">&mdash;</td></tr>
+<tr><td><strong>AI Implementation</strong></td><td class="num">463</td><td class="num">14%</td><td class="num">9</td><td class="num">&mdash;</td></tr>
+<tr><td><strong>AI Operations</strong></td><td class="num">275</td><td class="num">8%</td><td class="num">34</td><td class="num">&mdash;</td></tr>
+<tr><td><strong>AI Research</strong></td><td class="num">255</td><td class="num">7%</td><td class="num">49</td><td class="num">3</td></tr>
+<tr><td><strong>AI Product</strong></td><td class="num">227</td><td class="num">6%</td><td class="num">20</td><td class="num">&mdash;</td></tr>
+<tr><td><strong>AI Infrastructure</strong></td><td class="num">184</td><td class="num">5%</td><td class="num">37</td><td class="num">&mdash;</td></tr>
+<tr><td><strong>Go-to-market</strong></td><td class="num">160</td><td class="num">4%</td><td class="num">2</td><td class="num">&mdash;</td></tr>
+<tr><td><strong>ML Engineering</strong></td><td class="num">132</td><td class="num">4%</td><td class="num">&mdash;</td><td class="num">3</td></tr>
+<tr><td colspan="3" style="color:var(--muted)">Unstated across the whole set</td><td class="num" colspan="2">2,981 of 3,276</td></tr>
+</tbody></table></div>
+</section>
+<div class="note">
+<span class="eyebrow" style="color:var(--accent)">What this is</span>
+<p>A weekly read of the AI hiring market, built by scraping company ATS boards directly and classifying every req &mdash; real ML role vs. AI-washed, stack named, comp band, sponsorship, days open. The public edition is free and always will be.</p>
+<p><strong>The paid edition</strong> adds the full row-level dataset (CSV + API), your own company set tracked on request, and week-over-week movement alerts on the tools and teams you care about. <strong>$199/month.</strong> Reply and I&rsquo;ll set you up on the next run.</p>
+</div>
+<footer>
+Sources: public Greenhouse, Lever and Ashby job-board APIs. 127 companies seeded, 82 resolved, 45 boards not found under a guessed token. Reqs counted as AI when the posting body carries two or more substantive ML signals, which is why headline counts run below each company&rsquo;s total openings.<br>Generated 2026-09-07 20:41 UTC in 61.4s.
+</footer>
+</div>
